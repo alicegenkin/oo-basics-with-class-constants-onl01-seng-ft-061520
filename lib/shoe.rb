@@ -6,7 +6,7 @@ BRANDS=[]
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    BRANDS << brand unless BRANDS.any? {|name| name === brand }
   end
   def cobble
     self.condition = "new"
